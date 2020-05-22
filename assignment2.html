@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<title>Assignment2</title>
+</head>
+<body>	
+
+<fieldset>		
+<legend>Personal Information</legend>
+<label for="fname">First Name </label>
+<input type="text"  id="fname"  name="fname"><br>	
+
+<div>Gender 
+<input type="radio" id="male" name="gender-choice" value="choice-1">	
+<label for="Gender-male">Male</label>	
+<input type="radio" id="female" name="gender-choice" value="choice-2">
+<label for="Gender-female">Female</label><br>  
+</div>
+
+<label for="lname">Lirst Name </label>
+<input type="text" id="lname" name="lname"><br>
+
+<div>  
+<label for="Nationality">Nationality</label>  
+<select id="Nationality" name="nationality">    
+<option value="canadian">Canadian</option>    
+<option value="Indian">Indian</option>    
+<option value="Russian">Russian</option>    
+<option value="American">American</option>  
+</select><br></div> 
+ 
+<label for "address">Address</label>  
+<input type="text" name="address" style="width:500px; height:100px;"><br>  
+</fieldset>
+
+<fieldset>	
+<legend>Medical History</legend>	  
+<input type="checkbox" id="smallpox" name="smallpox" value="smallpox">  
+<label for="smallpox"> Smallpox</label>  
+  <input type="checkbox" id="mumps" name="mumps" value="mumps">
+  <label for="mumps">Mumps</label>
+  <input type="checkbox" id="dizziness" name="dizziness" value="dizziness">
+  <label for="dizziness"> Dizziness</label>
+  <input type="checkbox" id="sneezing" name="sneezing" value="sneezing">
+  <label for="sneezing"> Sneezing</label><br>
+</fieldset>
+
+<fieldset>
+<legend>Current Medication</legend>
+<div>Are you taking any medication?
+<input type="radio" id="yes" value="yes">
+<label for="yes">Yes</label>
+<input type="radio" id="no" value="no">
+<label for="no">No</label>
+</div>
+
+<div>If you are currently taking medication,please indicate it in the space below<br>
+<textarea name="message" style="width:800px; height:150px;">
+</textarea>
+</div>
+
+</fieldset>
+
+<input type="Submit">
+<input type="Reset">
+</body>
+</html>
