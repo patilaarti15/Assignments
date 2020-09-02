@@ -1,0 +1,49 @@
+<div class="container-fluid ">
+  <div class="row" style="height: 100vh">
+    
+    <div class="col-6 bg-warning d-flex flex-column justify-content-center align-items-center">
+      <div class="h3">Welcome to my Appplication</div>
+      <div class="h6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,harum!</div>
+    </div>
+
+    <div class="col-6 bg-light d-flex flex-column justify-content-center align-items-center">
+        
+        <div class="alert alert-warning">A simple warning alert—check it out!</div>
+        <div class="h4">Application Register</div>
+   
+    <div>
+      <label>Name</label>
+      <input type="text" placeholder="FirstName     LastName" class="form-control" formControlName="FirstNameLastName"  > 
+    </div>
+  
+  <div>
+      <label>UserName</label>
+      <input type="text"  placeholder="Enter Username" class="form-control" formControlName="username">
+      <small id="emailHelp" class="form-text text-muted">username can contain letter and number without spaces.</small>
+    </div>
+
+  <div>
+    <label>Email address</label>
+    <input type="email" placeholder="abc@gmail.com"class="form-control" formControlName="Email">
+    <small id="emailHelp" class="form-text text-muted">please provide your email</small>
+  </div>
+
+  <div>
+    <label>Password</label>
+    <input type="password" placeholder="password" class="form-control" formControlName="password">
+  </div>
+  
+  <div>
+      <label>Confirm Password</label>
+      <input type="password" placeholder="password"class="form-control"formControlName="password" >
+  </div>
+
+  <button class="btn btn-md btn-warning mt-2 mb-2"[disabled]="fbFormGroup.valid"
+  (click)="registerHere()">Register Here</button>
+
+  <a routerLink="/login">Login Here</a>
+</div>
+
+</div>
+</div>
+  
