@@ -1,0 +1,114 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+    <!-- Left Block -->
+    <div
+      class="col-6
+      bg-warning 
+      d-flex 
+      flex-column 
+      justify-content-center 
+      align-items-center"
+      >
+
+      <div>
+        <fa-icon [icon]="faAirFreshener" 
+        style="font-size: 54px"></fa-icon>
+      </div>
+      
+      <div class="h3">
+        Welcome to my Appplication
+      </div>
+      
+      <div class="h6"> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,harum!
+      </div>
+
+    </div>
+
+    <!-- Right Block-->
+        <div
+         class="col-6
+         bg-light
+         d-flex 
+         flex-column
+         justify-content-center 
+         align-items-center "
+        [formGroup]="fbFormGroup"
+         >
+        
+        <div class="alert alert-danger" 
+           role="alert" 
+           *ngIf="uiInvalidCredential">
+           A simple danger alert—check it out!
+        </div>
+
+      
+
+         <div class="h3 text-warning">
+           Login into ContactForm
+         </div>
+
+
+      <div class="mt-3">
+          <label>Email</label>
+          <input
+          type="text"
+          placeholder="Enter Email"
+          class="form-control"
+          formControlName="username"
+          />
+      </div>
+
+        <div class="mt-3">
+        <label>Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          class="form-control"
+          formControlName="password"/>
+        </div>
+
+      <button
+        class="btn 
+        btn-sm 
+        btn-warning 
+        mt-2 
+        mb-2"
+        [disabled]="!fbFormGroup.valid"
+        (click)="loginProcessHere()"
+      >
+        Login Here
+      </button>
+
+     
+      <div>
+        <input type="checkbox">
+        <label class="form-check-label" for="remember">Remember me</label>
+      </div>
+     
+      <div class="row 
+      d-flex 
+      flex-column
+      justify-content-space-between
+      align-items-center">
+     
+      <div>
+        <a class="btn 
+        btn-sm 
+        btn-outline-info" routerLink="/forgetpw">
+        Forget password?</a>
+      </div>
+  
+      <div>
+      <a class="btn 
+      mt-2 
+      btn-sm 
+      btn-outline-info" routerLink="/register">
+      Register</a>
+      </div>
+
+       </div>
+    
+    </div>
+  </div>
+</div>
