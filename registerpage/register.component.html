@@ -1,5 +1,5 @@
 <div class="container-fluid ">
-    <div class="row" style="height: 100vh">
+    <div class="row" style="height: 100vh" [formGroup]="fbInput">
       
     <div class="col-6
        bg-info
@@ -25,35 +25,39 @@
 
       
           
-     <div class="alert alert-info">A simple warning alert—check it out!</div>
-     <p class="h3 
-               text-info 
-               font-weight-bold 
-               mb-4 ">Sign up</p>
+      <div class="alert 
+      alert-warning"
+      role="alert"
+      id="alertId">
+                
+      
+      </div>
+     <p class="h3 font-weight-bold mb-4 text-info ">Sign up</p>
           
-    <div class="form-row mb-2">
-        <div class="col">
-              <input type="text" formControlName="firstname" 
-              class="form-control" placeholder="First name">
-        </div>
-
-        <div class="col">
-              <input type="text" formControlName="lastname" 
-              class="form-control" placeholder="Last name">
-        </div>
-    </div>
     
-    <div>
+        <div class="mb-2">
+              <input type="text" formControlName="your_name" 
+              class="form-control" placeholder="FirstName   LastName">
+        </div>
+
+        <div style="width: 16vw;">
          <input type="text"  placeholder="Enter Username" 
-         class="form-control" formControlName="username">
+         class="form-control" formControlName="username" >
 
-         <small>username can contain letter and number without spaces.</small>
-    </div>
+         <small id="emailHelp" 
+         class="form-text 
+         text-muted">username can contain letter and number without spaces.</small>
+        </div>
 
-    <div class="mt-4 mb-2">
-        <input type="email" placeholder="abc@gmail.com"
-        class="form-control" formControlName="Email">
-        <small class="mb-2">please provide your email</small>
+    <div class="mt-4 mb-2 " style="width: 16vw;">
+      <input type="email" placeholder="abc@gmail.com"
+      class="form-control" formControlName="email"
+      >
+    
+      <small id="emailHelp" 
+      class="form-text 
+      text-muted 
+      mb-2">please provide your email</small>
     </div>
   
     
@@ -65,17 +69,17 @@
 
     <div class="mt-1">
         <input type="password" placeholder="Confirm password"
-        class="form-control"formControlName="password" >
+        class="form-control"formControlName="confirm_password" >
     </div>
 
   
-    <button class="btn btn-md btn-secondary mt-2 mb-2"[disabled]="fbFormGroup.valid"
-    (click)="registerHere()">Register Here</button>
+    <button class="btn btn-md btn-secondary mt-2 mb-2"[disabled]="!fbInput.valid"
+    (click)="registerFun()">Register Here</button>
 
     <hr>
     <p>By clicking <b>Sign up</b> you agree to our terms of service</p>
   
-    <a class="text-primary"routerLink="/login">Login Here</a>
+    <a class="text-primary"routerLink="/log-in">Login Here</a>
   </div>
   
   </div>
