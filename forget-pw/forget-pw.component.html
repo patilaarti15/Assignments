@@ -27,21 +27,43 @@
           >
 
 
-          <div class="h2 text-info mb-4 font-weight-bolder">Forgot Password?</div>
-          <p class="mb-5 text-secondary font-weight-bold">you can reset your password here.</p>
+          <div class="h2 text-info
+                      mb-4 
+                      font-weight-bolder">Forgot Password?
+          </div>
+             
+          <p class="mb-5 
+                    text-secondary 
+                    font-weight-bold">you can reset your password here.
+          </p>
 
 
 
           <div required style="width: 19vw;">
             <label for="InputEmail">Email address</label>
-            <input  type="email" class="form-control" formControlName="Email"  placeholder="example@gmail.com">
+            <input  type="email" 
+                   class="form-control" 
+                   formControlName="Email"  
+                   placeholder="example@gmail.com">
           </div>
            
           
-          <button type="submit" class="btn btn-info btn-block mt-5 mb-3"  [disabled]="!fbInput.valid" style="width: 19vw;">Send My Password</button>
+          <button type="submit" 
+                  class="btn btn-info
+                         btn-block 
+                         mt-5 
+                         mb-3"  
+                  [disabled]="!fbInput.valid"
+                  style="width: 19vw;">
+              Send My Password
+          </button>
+             
          <!--(click)="submit()"-->>
 
-          <a class="text-primary"routerLink="/login">back to login</a>
+          <a class="text-primary"
+             routerLink="/login">
+              back to login
+          </a>
 
           </div> 
 
