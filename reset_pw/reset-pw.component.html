@@ -1,0 +1,60 @@
+<div class="container-fluid"> 
+    <div class="row" style="height: 100vh" [formGroup]="fbInput">
+         <!-- Right Block-->
+        <div
+        class="col-6
+        bg-info
+        d-flex 
+        flex-column 
+        justify-content-center 
+        align-items-center"
+        >
+
+        
+        </div>   
+
+        
+         <!-- Left Block-->
+         <div
+           class="col-6
+           bg-light
+           d-flex 
+           flex-column
+           justify-content-center 
+           align-items-center 
+           text-center
+           "
+          >
+
+
+          <div class="h2 text-info mb-4 font-weight-bolder">Set a new password</div>
+          <p class="mb-5 text-secondary font-weight-bold">you can set your password here.</p>
+
+
+
+          <div required style="width: 19vw;">
+            <label for="InputPassword">New password</label>
+            <input  type="password" class="form-control mb-3" formControlName="New_PW"  placeholder="New password">
+          </div>
+
+          <div style="width: 19vw;">
+            <label for="InputPassword">Confirm password</label>
+
+            <input  type="password" class="form-control mb-3" formControlName="Confirm_PW" placeholder="Confirm password">
+          </div>
+           
+          
+          <button type="submit" class="btn btn-info btn-block mt-5 mb-3"  [disabled]="!fbInput.valid" style="width: 19vw;">Change Password</button>
+         <!--(click)="submit()"-->
+
+          <a class="text-primary"routerLink="/login">back to login</a>
+
+          </div> 
+
+
+
+
+
+
+    </div>
+</div>
